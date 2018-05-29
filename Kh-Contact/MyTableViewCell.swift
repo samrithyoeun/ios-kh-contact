@@ -9,8 +9,11 @@
 import UIKit
 
 class MyTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var englishName: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var khmerName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +23,13 @@ class MyTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func loadDataToCell( with contact : Contact){
+        self.khmerName.text = contact.khmerName
+        self.englishName.text = contact.englishName
+        self.phone.text = contact.phone
+        self.logo.image = UIImage(named : contact.logo.replacingOccurrences(of: " ", with: "").lowercased())
     }
 
 }

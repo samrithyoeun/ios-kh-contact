@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dOK-wP-Y1y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="869-lK-amw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,64 +14,66 @@
         <scene sceneID="4Gq-Nm-ewt">
             <objects>
                 <tableViewController id="dOK-wP-Y1y" customClass="ContactTableViewController" customModule="Kh_Contact" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="PfO-gC-PPR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="PfO-gC-PPR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" rowHeight="110" id="mo6-rX-V2N" customClass="MyTableViewCell" customModule="Kh_Contact">
-                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" rowHeight="84" id="mo6-rX-V2N" customClass="MyTableViewCell" customModule="Kh_Contact" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mo6-rX-V2N" id="RF5-j3-Blg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="policeman" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-D0-pbc">
-                                            <rect key="frame" x="15" y="15" width="70" height="70"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="policeman" translatesAutoresizingMaskIntoConstraints="NO" id="yvW-D0-pbc">
+                                            <rect key="frame" x="15" y="15" width="55" height="55"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="1d2-Br-KSK"/>
-                                                <constraint firstAttribute="height" constant="70" id="b4G-JF-b7J"/>
+                                                <constraint firstAttribute="width" constant="55" id="ReP-4W-s61"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-6w-wuL">
-                                            <rect key="frame" x="101" y="15" width="254" height="70"/>
+                                            <rect key="frame" x="86" y="15" width="269" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="ប៉ូលីសទេសចរណ៌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TM-P8-Ukh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="254" height="29"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="269" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic Police" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nL-wn-E94">
-                                                    <rect key="frame" x="0.0" y="29" width="254" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="20.5" width="269" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="012 111 222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oer-dj-xaS">
-                                                    <rect key="frame" x="0.0" y="49.5" width="254" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="012 111 222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oer-dj-xaS">
+                                                    <rect key="frame" x="0.0" y="41" width="269" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="70" id="zbE-hQ-4k7"/>
-                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Dyv-6w-wuL" firstAttribute="top" secondItem="yvW-D0-pbc" secondAttribute="top" id="MeP-DO-jrt"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="leading" secondItem="RF5-j3-Blg" secondAttribute="leading" constant="15" id="0WJ-B4-jM2"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="leading" secondItem="RF5-j3-Blg" secondAttribute="leadingMargin" constant="-1" id="1In-Fy-Frp"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="top" secondItem="RF5-j3-Blg" secondAttribute="topMargin" constant="4" id="Mzs-tz-s4u"/>
                                         <constraint firstAttribute="trailing" secondItem="Dyv-6w-wuL" secondAttribute="trailing" constant="20" symbolic="YES" id="OMz-Ri-fNh"/>
-                                        <constraint firstItem="Dyv-6w-wuL" firstAttribute="bottom" secondItem="yvW-D0-pbc" secondAttribute="bottom" id="Sue-FE-Bq5"/>
-                                        <constraint firstItem="Dyv-6w-wuL" firstAttribute="leading" secondItem="yvW-D0-pbc" secondAttribute="trailing" constant="16" id="UH0-uX-Cc8"/>
-                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="leading" secondItem="RF5-j3-Blg" secondAttribute="leading" constant="15" id="cMT-EP-Y0W"/>
-                                        <constraint firstAttribute="bottom" secondItem="yvW-D0-pbc" secondAttribute="bottom" constant="24.5" id="j5S-02-SEf"/>
-                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="top" secondItem="RF5-j3-Blg" secondAttribute="top" constant="15" id="kIh-dX-jvI"/>
+                                        <constraint firstItem="Dyv-6w-wuL" firstAttribute="leading" secondItem="yvW-D0-pbc" secondAttribute="trailing" constant="16" id="S3e-98-Arb"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="top" secondItem="RF5-j3-Blg" secondAttribute="top" constant="15" id="Sgr-Ib-JRL"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="bottom" secondItem="Dyv-6w-wuL" secondAttribute="bottom" id="e8r-gR-gh6"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="centerY" secondItem="RF5-j3-Blg" secondAttribute="centerY" id="j5r-LC-Ifq"/>
+                                        <constraint firstAttribute="bottom" secondItem="yvW-D0-pbc" secondAttribute="bottom" constant="13.5" id="qjq-Bb-Rq1"/>
+                                        <constraint firstItem="yvW-D0-pbc" firstAttribute="top" secondItem="Dyv-6w-wuL" secondAttribute="top" id="shH-lL-PWH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="name" destination="0nL-wn-E94" id="ygm-sU-F7g"/>
+                                    <outlet property="englishName" destination="0nL-wn-E94" id="cbL-F9-Zlx"/>
+                                    <outlet property="khmerName" destination="6TM-P8-Ukh" id="fix-4b-xxm"/>
+                                    <outlet property="logo" destination="yvW-D0-pbc" id="mkV-ff-oNS"/>
+                                    <outlet property="phone" destination="Oer-dj-xaS" id="1EH-DG-yDE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,6 +85,24 @@
                     <navigationItem key="navigationItem" title="KH-Contact" id="S5C-c8-yXj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8p3-pN-bOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834.4000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hsd-lq-Q7P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="869-lK-amw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vec-r7-J7B">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dOK-wP-Y1y" kind="relationship" relationship="rootViewController" id="7pg-Ra-Bbe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N58-ZH-aqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1895.2" y="133.5832083958021"/>
         </scene>

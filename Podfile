@@ -1,10 +1,7 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-target 'Kh-Contact' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Kh-Contact
-  pod 'RealmSwift'
-end
+Telephone:
+089 954 848 for Technical Matters
+ 	012-228-929 or 096 887 7538 
+ Email: samsophy2013@gmail.com for Administrative Matters
+077 693 996 for Visa and Travel Arrangements to China</li>
+</ul>
+<strong><u>Email:</u> gnhd.cambodia@gmail.com</strong>

@@ -45,6 +45,9 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     
     // MARK: -Text Didchange of Searchbar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+      
+        
         guard !searchText.isEmpty
             else {
                 currentContacts = contacts
@@ -52,10 +55,20 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
         }
         
         currentContacts = contacts.filter({ (contact) -> Bool in
-            return contact.englishName.lowercased().replacingOccurrences(of: " ", with: "").contains(searchText.lowercased().replacingOccurrences(of: " ", with: ""))
+            return contact.englishName.lowercased().replacingOccurrences(of: " ", with: "")
+            .contains(searchText.lowercased().replacingOccurrences(of: " ", with: "") ) ?true :
+            contact.khmerName.contains(searchText)
+        
         })
+            
+        
+        
+        print(searchText)
         table.reloadData()
+        
+        
         }
+    
     
         
     // MARK: - Table view data source
@@ -78,6 +91,38 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     }
 
 
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let strPhoneNumber = currentContacts[indexPath.row].phone
+        if let phoneCallURL:URL = URL(string: "tel://\(strPhoneNumber)")
+        {
+            let application:UIApplication = UIApplication.shared
+                if application.canOpenURL(phoneCallURL)
+                {
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                    tableView.deselectRow(at: indexPath, animated: true)
+                }
+            
+        }
+        
+        // MARK: - alert dialog
+        /*
+        if (application.canOpenURL(phoneCallURL)) {
+                let alertController = UIAlertController(title: "Kh-Contacts", message: "Are you sure you want to call \n\(strPhoneNumber)?", preferredStyle: .alert)
+                let yesPressed = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                    
+                    
+                })
+                let noPressed = UIAlertAction(title: "No", style: .default, handler: { (action) in
+                    
+                })
+                alertController.addAction(yesPressed)
+                alertController.addAction(noPressed)
+                present(alertController, animated: true, completion: nil)
+            }
+        */
+        }
+ 
+ }
+ 
 
-}
+
